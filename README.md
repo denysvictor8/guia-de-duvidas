@@ -38,5 +38,8 @@ npm install --save mysql2
 - sequelize <br/>
 npm install --save sequelize
 
+### Parar rodar basta o comando abaixo
+nodemon index.js
+
 
 
