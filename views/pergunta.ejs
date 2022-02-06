@@ -1,0 +1,72 @@
+<%- include('partials/header.ejs'); -%>
+
+<body>
+    
+    <%- include('partials/navbar.ejs'); -%>
+    <br>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1><%= pergunta.titulo %></h1>
+                <hr>
+                <p><%= pergunta.descricao %></p>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex flex-row-reverse bd-highlight">
+                    <div class="btn-group gap-1" role="group">
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#respostaModal">
+                            Envie sua resposta
+                        </button>
+                        <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+                          Ordenar respostas:
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                          <li><a class="dropdown-item" href="/pergunta/<%= pergunta.id %>/antigas">Mais antigas</a></li>
+                          <li><a class="dropdown-item" href="/pergunta/<%= pergunta.id %>/recentes">Mais recentes</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="respostaModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sua Resposta</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1>Sua resposta:</h1>
+                        <form method="POST" action="/salvarresposta">
+                            <label for="">Titulo</label>
+                            <input type="text" placeholder="Titulo" class="form-control" name="titulo" required>
+                            <br>
+                            <label for="">Descrição</label>
+                            <textarea name="descricao" id="" placeholder="Sua pergunta aqui..." class="form-control"  cols="30" rows="5" required></textarea>
+                            <br>
+                            <input type="number" hidden value="<%= pergunta.id %>" name="pergunta_id">
+                            <button class="btn btn-success">Enviar</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <%  respostas.forEach( resposta => { %>
+        <br>
+        <div class="card">
+            <div class="card-body">
+                <h1><%= resposta.titulo %></h1>
+                <hr>
+                <p><%= resposta.descricao %></p>
+            </div>
+        </div>
+        <% }) %>
+        <br>
+    </div>
+
+</body>
+<%- include('partials/footer.ejs'); -%>

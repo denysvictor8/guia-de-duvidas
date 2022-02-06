@@ -1,0 +1,54 @@
+<%- include('partials/header.ejs'); -%>
+
+<body>
+    
+    <%- include('partials/navbar.ejs'); -%>
+    <br>
+    
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1>Olá</h1>
+                <p class="h4">Faça sua pergunta clicando <a class="btn btn-outline-dark" href="/perguntar">aqui</a> !!!</p>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex flex-row-reverse bd-highlight">
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+                          Ordenar perguntas:
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                          <li><a class="dropdown-item" href="/perguntas/antigas">Mais antigas</a></li>
+                          <li><a class="dropdown-item" href="/perguntas/recentes">Mais recentes</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <%  perguntas.forEach( pergunta => { %>
+        <div class="card">
+
+            <div class="card-body">
+                <h1><%= pergunta.titulo %></h1>
+                <hr>
+                <p><%= pergunta.descricao %></p>
+            </div>
+
+            <div class="card-footer">
+                <a class="btn btn-success btn-sm" href="/pergunta/<%= pergunta.id %>">Responder</a>
+            </div>
+
+        </div>
+        <br>
+        <% }) %> 
+    </div>
+
+
+</body>
+
+<%- include('partials/footer.ejs'); -%>
+
+
+
