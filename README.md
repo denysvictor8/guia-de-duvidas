@@ -4,7 +4,7 @@
 
 Este projeto foi criado com o intuito de praticar conceitos básicos de Node.js com Express. Trata-se de uma plataforma onde as perguntas são criadas e esperam por respostas. 
 
-## Abaixo estão as dependências utilizadas no projeto:
+### Abaixo estão as dependências utilizadas no projeto:
 
 <table>
   <tr> 
