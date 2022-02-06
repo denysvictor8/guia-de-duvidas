@@ -24,7 +24,7 @@ Este projeto foi criado com o intuito de praticar conceitos básicos de Node.js 
 </table>
 
 - express <br/>
-npm install express --save
+$ npm install express --save
 
 - body parser <br/>
 $ npm install body-parser
@@ -33,13 +33,13 @@ $ npm install body-parser
 $ npm install ejs
 
 - mysql2 <br/>
-npm install --save mysql2
+$ npm install --save mysql2
 
 - sequelize <br/>
-npm install --save sequelize
+$ npm install --save sequelize
 
 ### Parar rodar basta o comando abaixo
-nodemon index.js
+$ nodemon index.js
 
 
 
