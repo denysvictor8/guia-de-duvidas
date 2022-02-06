@@ -23,7 +23,7 @@ Este projeto foi criado com o intuito de praticar conceitos básicos de Node.js 
   </tr>
 </table>
 
-### Parar rodar basta o comando abaixo
+### Siga os passos abaixo:
 1. instalar as dependencais:
 - $ npm install
 2. rodar o projeto
