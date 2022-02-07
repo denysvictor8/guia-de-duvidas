@@ -2,7 +2,7 @@
 
 > Status: Finnished 👌
 
-Este projeto foi criado com o intuito de praticar conceitos básicos de Node.js com Express. Trata-se de uma plataforma onde as perguntas são criadas e esperam por respostas. 
+Este projeto foi criado com o intuito de praticar conceitos básicos de Node.js com Express, desse modo, não foi realizado o uso de arquitetura MVC. Trata-se de uma plataforma onde as perguntas são criadas e esperam por respostas. 
 
 ### Abaixo estão as dependências utilizadas no projeto:
 
