@@ -8,11 +8,11 @@ Este projeto foi criado com o intuito de praticar conceitos básicos de Node.js 
 
 <table>
   <tr> 
-    <td> Express </td> 
-    <td> body parser </td>
-    <td> EJS </td>
-    <td> mysql2 </td>
-    <td> sequelize </td>
+    <th> Express </th> 
+    <th> body parser </th>
+    <th> EJS </th>
+    <th> mysql2 </th>
+    <th> sequelize </th>
   </tr>  
   <tr> 
     <td> ^4.17.2 </td>
